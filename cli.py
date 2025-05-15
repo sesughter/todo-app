@@ -15,7 +15,7 @@ while True:
 
         todos.append(todo)
 
-        functions.write_todo("todos.txt", todos)
+        functions.write_todo(todos)
 
     elif user_action.startswith("show"):
         todos = functions.get_todo()
@@ -39,7 +39,7 @@ while True:
             print("wrong command")
             continue
 
-        functions.write_todo("todos.txt", todos)
+        functions.write_todo(todos)
     elif user_action.startswith("complete"):
         try:
             todos = functions.get_todo()
@@ -47,7 +47,7 @@ while True:
             user_pick = int(user_action[9:])
             todos.pop(user_pick - 1)
 
-            functions.write_todo("todos.txt", todos)
+            functions.write_todo(todos)
         except IndexError:
             print("No todo with that number")
             continue

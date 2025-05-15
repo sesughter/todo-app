@@ -3,3 +3,8 @@ win in chess
 sleep
 workout
 sleep tomor
+walkpaly bball
+runrun
+run
+play
+play hide
