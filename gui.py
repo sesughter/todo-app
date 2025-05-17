@@ -1,6 +1,11 @@
 import functions
 import PySimpleGUI as sg
 import time
+import os
+
+if not os.path.exists("todos.txt"):
+    with open("todos.txt", "w") as file:
+        pass
 
 sg.theme("black")
 clock_label = sg.Text('', key="Clock")
@@ -28,6 +33,7 @@ while True:
             todos.append(new_todo)
             functions.write_todo(todos)
             window["todos"].update(todos)
+            window["todo"].update(value="")
         case "Edit":
             try:
                 todo_to_edit = value["todos"][0]
