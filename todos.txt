@@ -1,6 +1,5 @@
 clean guiter
 win in chess
-sleep
 workout
 play ball
 take a walk
